@@ -1,0 +1,131 @@
+<form [formGroup]="experienceForm" (submit)="onSubmit()" class="px-2 max-w-4xl mx-auto mt-10">
+  <div class="grid gap-6 mb-6 md:grid-cols-2">
+    <div>
+      <label for="NumCompaniesWorked" class="block mb-2 text-sm font-medium text-gray-900">{{
+        dataFields.numCompaniesWorked
+      }}</label>
+      <input
+        type="number"
+        formControlName="numCompaniesWorked"
+        id="NumCompaniesWorked"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        required
+      />
+    </div>
+    <div>
+      <label for="TotalWorkingYears" class="block mb-2 text-sm font-medium text-gray-900">{{
+        dataFields.totalWorkingYears
+      }}</label>
+      <input
+        type="number"
+        formControlName="totalWorkingYears"
+        id="TotalWorkingYears"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        required
+      />
+    </div>
+    <div>
+      <label for="YearsInCurrentRole" class="block mb-2 text-sm font-medium text-gray-900">{{
+        dataFields.yearsInCurrentRole
+      }}</label>
+      <input
+        type="number"
+        formControlName="yearsInCurrentRole"
+        id="YearsInCurrentRole"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        required
+      />
+    </div>
+    <div>
+      <label for="YearsSinceLastPromotion" class="block mb-2 text-sm font-medium text-gray-900">{{
+        dataFields.yearsSinceLastPromotion
+      }}</label>
+      <input
+        type="number"
+        formControlName="yearsSinceLastPromotion"
+        id="YearsSinceLastPromotion"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="ManagementRelationship" class="block mb-2 text-sm font-medium text-gray-900">{{
+        dataFields.managementRelationship
+      }}</label>
+      <input
+        type="number"
+        formControlName="managementRelationship"
+        id="ManagementRelationship"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        required
+      />
+    </div>
+    <div>
+      <label for="WorkLifeBalance" class="block mb-2 text-sm font-medium text-gray-900">{{
+        dataFields.workLifeBalance
+      }}</label>
+      <input
+        type="number"
+        formControlName="workLifeBalance"
+        id="WorkLifeBalance"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        required
+      />
+    </div>
+  </div>
+  <div class="mb-6">
+    <label for="WorkLifeBalanceDesc" class="block mb-2 text-sm font-medium text-gray-900">{{
+      dataFields.workLifeBalanceDesc
+    }}</label>
+    <textarea
+      formControlName="workLifeBalanceDesc"
+      id="WorkLifeBalanceDesc"
+      rows="6"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      placeholder="Type here ..."
+    ></textarea>
+  </div>
+  <div class="mb-6">
+    <label for="EnhanceWorkEnvironment" class="block mb-2 text-sm font-medium text-gray-900">{{
+      dataFields.enhanceWorkEnvironment
+    }}</label>
+    <textarea
+      formControlName="enhanceWorkEnvironment"
+      id="EnhanceWorkEnvironment"
+      rows="6"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      placeholder="Type here ..."
+    ></textarea>
+  </div>
+  <div class="mb-6">
+    <label for="OneChangeinWorkEnvironment" class="block mb-2 text-sm font-medium text-gray-900">{{
+      dataFields.oneChangeinWorkEnvironment
+    }}</label>
+    <textarea
+      formControlName="oneChangeinWorkEnvironment"
+      id="OneChangeinWorkEnvironment"
+      rows="6"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      placeholder="Type here ..."
+    ></textarea>
+  </div>
+  <div class="mb-6">
+    <label for="AreaToFocus" class="block mb-2 text-sm font-medium text-gray-900">{{
+      dataFields.areaToFocus
+    }}</label>
+    <textarea
+      formControlName="areaToFocus"
+      id="AreaToFocus"
+      rows="6"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      placeholder="Type here ..."
+    ></textarea>
+  </div>
+  <button
+    type="submit"
+    class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+  >
+    Submit
+  </button>
+</form>

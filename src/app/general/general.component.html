@@ -1,0 +1,121 @@
+<form [formGroup]="generalForm" (submit)="onSubmit()" class="px-2 max-w-4xl mx-auto mt-10">
+  <div class="grid gap-6 mb-6 md:grid-cols-2">
+    <div>
+      <label for="Age" class="block mb-2 text-sm font-medium text-gray-900">{{ dataFields.age }}</label>
+      <input
+        type="number"
+        formControlName="age"
+        id="Age"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        required
+      />
+    </div>
+    <div>
+      <label for="Gender" class="block mb-2 text-sm font-medium text-gray-900">{{ dataFields.gender }}</label>
+      <select
+        formControlName="gender"
+        id="Gender"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      >
+        <option selected>Select gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="none">Prefer not to say</option>
+      </select>
+    </div>
+    <div>
+      <label for="Department" class="block mb-2 text-sm font-medium text-gray-900">{{ dataFields.department }}</label>
+      <select
+        formControlName="department"
+        id="Department"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      >
+        <option selected>Select Department</option>
+        <option value="sps">SPS</option>
+        <option value="som">SOM</option>
+        <option value="cmada">CMACD</option>
+        <option value="isso">ISSO</option>
+      </select>
+    </div>
+    <div>
+      <label for="MaritalStatus" class="block mb-2 text-sm font-medium text-gray-900">{{
+        dataFields.maritalStatus
+      }}</label>
+      <select
+        formControlName="maritalStatus"
+        id="MaritalStatus"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      >
+        <option selected></option>
+        <option value="male">Single</option>
+        <option value="female">Married</option>
+        <option value="none">Prefer not to say</option>
+      </select>
+    </div>
+    <div>
+      <label for="TravelHours" class="block mb-2 text-sm font-medium text-gray-900">{{ dataFields.travelTime }}</label>
+      <input
+        type="number"
+        formControlName="travelTime"
+        id="TravelHours"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        required
+      />
+    </div>
+    <div>
+      <label for="TravelDistance" class="block mb-2 text-sm font-medium text-gray-900">{{
+        dataFields.travelDistance
+      }}</label>
+      <input
+        type="number"
+        formControlName="travelDistance"
+        id="TravelDistance"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        required
+      />
+    </div>
+  </div>
+  <div class="mb-6">
+    <label for="Education" class="block mb-2 text-sm font-medium text-gray-900">{{ dataFields.education }}</label>
+    <select
+      formControlName="education"
+      id="Education"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+    >
+      <option selected>Select your highest education level</option>
+      <option value="bachelors">Bachelor's Degree</option>
+      <option value="masters">Master's Degree</option>
+      <option value="phd">Doctoral Degree</option>
+      <option value="associate">Some College or Associate Degree</option>
+      <option value="highSchool">High School Diploma/GED</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+  <div class="mb-6">
+    <label for="WorkingHours" class="block mb-2 text-sm font-medium text-gray-900">{{ dataFields.workingHours }}</label>
+    <input
+      formControlName="workingHours"
+      type="number"
+      id="WorkingHours"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      required
+    />
+  </div>
+  <div class="mb-6">
+    <label for="PerHourWage" class="block mb-2 text-sm font-medium text-gray-900">{{ dataFields.perHourWage }}</label>
+    <input
+      type="number"
+      formControlName="perHourWage"
+      id="PerHourWage"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      required
+    />
+  </div>
+
+  <button
+    type="submit"
+    class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+  >
+    Next
+  </button>
+</form>

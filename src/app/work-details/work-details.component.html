@@ -1,0 +1,155 @@
+<form [formGroup]="workForm" (submit)="onSubmit()" class="px-2 max-w-4xl mx-auto mt-10">
+  <div class="grid gap-6 mb-6 md:grid-cols-2">
+    <div>
+      <label for="MonthlyIncome" class="block mb-2 text-sm font-medium text-gray-900">{{
+        dataFields.monthlyIncome
+      }}</label>
+      <input
+        type="number"
+        formControlName="monthlyIncome"
+        id="MonthlyIncome"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        required
+      />
+    </div>
+    <div>
+      <label for="SalaryHikePercent" class="block mb-2 text-sm font-medium text-gray-900">{{
+        dataFields.salaryHikePercent
+      }}</label>
+      <input
+        type="number"
+        formControlName="salaryHikePercent"
+        id="SalaryHikePercent"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        required
+      />
+    </div>
+    <div>
+      <label for="StandardHours" class="block mb-2 text-sm font-medium text-gray-900">{{
+        dataFields.standardHours
+      }}</label>
+      <input
+        type="number"
+        formControlName="standardHours"
+        id="StandardHours"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        required
+      />
+    </div>
+    <div>
+      <label for="OverTime" class="block mb-2 text-sm font-medium text-gray-900">{{ dataFields.overTime }}</label>
+      <select
+        formControlName="overTime"
+        id="OverTime"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      >
+        <option selected></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+    <div>
+      <label for="OverTimeHours" class="block mb-2 text-sm font-medium text-gray-900">{{
+        dataFields.overTimeHours
+      }}</label>
+      <input
+        type="number"
+        formControlName="overTimeHours"
+        id="OverTimeHours"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        required
+      />
+    </div>
+    <div>
+      <label for="JobInvolvement" class="block mb-2 text-sm font-medium text-gray-900">{{
+        dataFields.jobInvolvement
+      }}</label>
+      <input
+        type="number"
+        formControlName="jobInvolvement"
+        id="JobInvolvement"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        required
+      />
+    </div>
+  </div>
+  <div class="mb-6">
+    <label for="JobInvolvementDesc" class="block mb-2 text-sm font-medium text-gray-900">{{
+      dataFields.jobInvolvementDesc
+    }}</label>
+    <textarea
+      formControlName="jobInvolvementDesc"
+      id="JobInvolvementDesc"
+      rows="6"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      placeholder="Type here ..."
+    ></textarea>
+  </div>
+  <div class="mb-6">
+    <label for="JobSatisfaction" class="block mb-2 text-sm font-medium text-gray-900">{{
+      dataFields.jobSatisfaction
+    }}</label>
+    <input
+      formControlName="jobSatisfaction"
+      type="number"
+      id="JobSatisfaction"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      required
+    />
+  </div>
+  <div class="mb-6">
+    <label for="JobSatisfactionDesc" class="block mb-2 text-sm font-medium text-gray-900">{{
+      dataFields.jobSatisfactionDesc
+    }}</label>
+    <textarea
+      formControlName="jobSatisfactionDesc"
+      id="JobSatisfactionDesc"
+      rows="6"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      placeholder="Type here ..."
+    ></textarea>
+  </div>
+  <div class="mb-6">
+    <label for="EnvironmentSatisfaction" class="block mb-2 text-sm font-medium text-gray-900">{{
+      dataFields.environmentSatisfaction
+    }}</label>
+    <input
+      type="number"
+      formControlName="environmentSatisfaction"
+      id="EnvironmentSatisfaction"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      required
+    />
+  </div>
+  <div class="mb-6">
+    <label for="EnvironmentSatisfactionDesc" class="block mb-2 text-sm font-medium text-gray-900">{{
+      dataFields.environmentSatisfactionDesc
+    }}</label>
+    <textarea
+      formControlName="environmentSatisfactionDesc"
+      id="EnvironmentSatisfactionDesc"
+      rows="6"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      placeholder="Type here ..."
+    ></textarea>
+  </div>
+  <div class="mb-6">
+    <label for="YearsAtCompany" class="block mb-2 text-sm font-medium text-gray-900">{{
+      dataFields.yearsAtCompany
+    }}</label>
+    <input
+      type="number"
+      formControlName="yearsAtCompany"
+      id="YearsAtCompany"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      required
+    />
+  </div>
+
+  <button
+    type="submit"
+    class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+  >
+    Next
+  </button>
+</form>
